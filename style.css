@@ -6,7 +6,7 @@
         box-sizing: border-box;
         width: 100%;
         height: auto;
-        background-color: black;
+        background-color: white;
         scroll-behavior: smooth;
         font-family: Bebas Neue;
     }
@@ -412,50 +412,100 @@
     @media (max-width: 768px) {
         .header {
             flex-direction: column;
+            text-align: center;
+        }
+
+        .header img.logo {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .header ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header ul li.bar {
+            margin: 5px 10px;
+        }
+
+        .pokemon-container {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #pokemon-list {
+            font-size: 16px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        #pokemon-modal div {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .map-container {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #map-modal div {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .characters-container {
+            padding: 10px;
+        }
+
+        .character-card {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .character-card button {
+            margin-top: 5px;
+        }
+
+        #characters-list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        #character-modal div,
+        #map-modal div,
+        #history-modal div,
+        #lore-modal div {
+            width: 90%;
+            max-width: 300px;
+        }
+
+        iframe {
+            width: 100%;
             height: auto;
         }
 
-        .header img {
-            margin-top: 25px;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            padding: 0;
+        .rodape-conteudo {
             display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .bar {
-            font-size: 18px;
-            margin-right: 0;
-        }
-
-        .header {
             flex-direction: column;
-            height: auto;
-            padding: 20px 0;
-        }
-    
-        .header img {
-            margin-top: 25px;
-            margin-bottom: 20px;
-            height: 80px;
-        }
-    
-        ul {
-            padding: 0;
-            display: flex;
-            flex-direction: row;
             align-items: center;
-            gap: 12px;
+            text-align: center;
         }
-    
-        .bar {
-            font-size: 18px;
-            margin-right: 0;
+
+        .rodape-redes, .rodape-contatos, .rodape-mensagem {
+            margin-bottom: 15px;
+        }
+
+        .rodape-redes a {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        #map-list {
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
