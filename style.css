@@ -133,12 +133,55 @@
         color: black;
         border: none;
         cursor: pointer;
+        font-family: Bebas Neue;
     }    
        
     .bebas-neue-regular {
         font-family: "Bebas Neue", sans-serif;
         font-weight: 400;
         font-style: normal;
+    }
+
+    .map-container {
+        display: none;
+        background-color: white;
+        padding: 15px;
+        overflow: hidden;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        animation: slide-down 0.5s ease forwards;
+    }
+
+    #map-list {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        gap: 5px;
+        margin-top: 20px;
+        justify-items: center;
+    }
+
+    .map-card {
+        padding: 15px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        width: 150px; 
+        text-align: center; 
+        transition: transform 0.3s, background-color 0.3s;
+        border-radius: 8px;
+    }
+
+    .map-card:hover {
+        transform: scale(1.05);
+        background-color: #f0f0f0;
+    }
+
+    #back-to-locations {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: orange;
+        color: black;
+        border: none;
+        cursor: pointer;
+        font-family: Bebas Neue;
     }
 
     @keyframes slide-down {
