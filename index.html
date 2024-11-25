@@ -54,31 +54,43 @@
                 <div class="character-card" data-character="Ash Ketchum" data-embed-id="f767f1a21b924033991a7fb1fb19820d">
                     <p>Ash Ketchum</p>
                 </div>
+                <button class="history-button" data-character="Ash Ketchum">Sobre</button>
                 
                 <div class="character-card" data-character="James Rocket" data-embed-id="9c3e94df379546b1a6870b15e90d6734">
                     <p>James Rocket</p>
                 </div>
+                <button class="history-button" data-character="James Rocket">Sobre</button>
                 
                 <div class="character-card" data-character="Misty" data-embed-id="23ad61ff53e44eb2883a4e8018eaa31d">
                     <p>Misty</p>
                 </div>
+                <button class="history-button" data-character="Misty">Sobre</button>
                 
                 <div class="character-card" data-character="Brock" data-embed-id="926aa1e1d7bd48b0b2b0d498c8049faa">
                     <p>Brock</p>
                 </div>
+                <button class="history-button" data-character="Brock">Sobre</button>
                 
                 <div class="character-card" data-character="Team Rocket" data-embed-id="7d15046f6798464ca0ac5290fcf62ac9">
                     <p>Jessie Rocket</p>
                 </div>
-                
+                <button class="history-button" data-character="Jessie Rocket">Sobre</button>
             </div>
         </div>
         
         <div id="character-modal" style="font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
             <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
                 <button id="character-modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
-                <h2 id="character-name">Nome do Personagem</h2>
+                <h2 id="character-name"></h2>
                 <div id="sketchfab-embed-container" class="sketchfab-embed-wrapper"></div>
+            </div>
+        </div>   
+        
+        <div id="history-modal" style="font-size: 20px; font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
+                <button id="history-modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+                <h2 id="history-modal-name"></h2>
+                <p id="history-modal-history"></p>
             </div>
         </div>        
 
