@@ -17,7 +17,7 @@
                 <li class="bar"><a id="pokemon-link" href="#">Pokemons</a></li>
                 <li class="bar"><a id="map-link" href="#map-link">Regiões</a></li>
                 <li class="bar"><a id="characters-link" href="#">Personagens</a></li>
-                <li class="bar"><a href="">Historia</a></li>
+                <li class="bar"><a id="lore-link" href="#">História</a></li>
             </ul>
         </header> 
 
@@ -92,10 +92,35 @@
                 <h2 id="history-modal-name"></h2>
                 <p id="history-modal-history"></p>
             </div>
-        </div>        
+        </div>
+
+        <div id="lore-container" class="lore-container" style="display: none;">
+            <button id="lore-button" class="history-button">Lore</button>
+            <a id="lore-link" href="#" style="color: orange; font-family: Bebas Neue; font-size: 18px;">Confira o Lore</a>
+        </div>
+        
+        <div id="lore-modal" style="font-size: 20px; font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 800px;">
+                <button id="lore-modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+                <h2>Lore de Pokémon</h2>
+                <iframe width="480" height="240" src="https://www.youtube.com/embed/rg6CiPI6h2g" title="Pokémon Theme Song (Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p id="lore-text" style="margin-top: 20px;">Pokémon começou como um jogo de videogame desenvolvido pela Game Freak 
+                    e publicado pela Nintendo para o Game Boy, lançado em 1996 no Japão. Criado por Satoshi Tajiri, o conceito 
+                    surgiu de sua paixão por colecionar insetos na infância. A ideia central do jogo é capturar, treinar e 
+                    batalhar com criaturas chamadas Pokémon, com o lema "Gotta Catch 'Em All!" (temos que pegar todos!). 
+                    O sucesso inicial dos jogos Pokémon Red e Green no Japão levou à criação de uma franquia multimídia, 
+                    incluindo jogos adicionais, um anime de enorme sucesso, filmes, cartas colecionáveis, brinquedos e 
+                    uma série de produtos licenciados. O anime acompanha Ash Ketchum (Satoshi no Japão) e seu parceiro 
+                    Pikachu em sua jornada para se tornar um Mestre Pokémon. Pokémon rapidamente se tornou um fenômeno 
+                    cultural global no final dos anos 1990 e início dos 2000, com o lançamento de Pokémon Red e Blue 
+                    no Ocidente. Até hoje, a franquia continua sendo uma das mais bem-sucedidas e influentes do mundo, 
+                    lançando novos jogos, séries e filmes que conquistam fãs de todas as idades.</p>
+            </div>
+        </div>
 
         <script src="pokemonsCall/script.js"></script>
         <script src="regionsCall/script.js"></script>
         <script src="charactersCall/script.js"></script>
+        <script src="loreCall/script.js"></script>
     </body>
     </html>
