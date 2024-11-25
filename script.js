@@ -82,7 +82,7 @@ fetchPokemonButton.addEventListener("click", async () => {
         modalResult.innerHTML = `
             <div>
                 <h2>${pokemon.name.toUpperCase()}</h2>
-                <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
+                <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" style="width: 250px; height: 250px">
                 <h3>Habilidades:</h3>
                 <ul>
                     ${pokemon.abilities.map(ability => `<li>${ability.ability.name}</li>`).join('')}
