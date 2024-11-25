@@ -64,10 +64,6 @@ async function fetchLocationDetails(url) {
     }
 }
 
-mapModalClose.addEventListener("click", () => {
-    mapModal.style.display = "none";
-});
-
 fetchLocationButton.addEventListener("click", async () => {
     const locationName = locationInput.value.trim().toLowerCase();
 
@@ -97,25 +93,16 @@ fetchLocationButton.addEventListener("click", async () => {
 
 mapLink.addEventListener("click", (e) => {
     e.preventDefault();
+    hideAllTabs();
     mapContainer.style.display = "block";
-    fetchLocations();
+    fetchLocations(); 
+});
+
+mapModalClose.addEventListener("click", () => {
+    mapModal.style.display = "none";
 });
 
 function hideAllTabs() {
     pokemonContainer.style.display = "none";
     mapContainer.style.display = "none";
 }
-
-pokemonLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideAllTabs();
-    pokemonContainer.style.display = "block";
-    fetchPokemons();
-});
-
-mapLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    hideAllTabs();
-    mapContainer.style.display = "block";
-    fetchLocations(); 
-});

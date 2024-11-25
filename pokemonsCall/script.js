@@ -64,10 +64,6 @@ async function fetchPokemonDetails(url) {
     }
 }
 
-modalClose.addEventListener("click", () => {
-    modal.style.display = "none";
-});
-
 fetchPokemonButton.addEventListener("click", async () => {
     const pokemonName = pokemonInput.value.trim().toLowerCase();
 
@@ -93,6 +89,17 @@ fetchPokemonButton.addEventListener("click", async () => {
     } catch (error) {
         modalResult.innerHTML = "<p>Pokémon não encontrado. Tente novamente.</p>";
     }
+});
+
+pokemonLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    hideAllTabs();
+    pokemonContainer.style.display = "block";
+    fetchPokemons();
+});
+
+modalClose.addEventListener("click", () => {
+    modal.style.display = "none";
 });
 
 function hideAllTabs() {

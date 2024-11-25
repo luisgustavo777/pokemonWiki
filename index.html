@@ -1,55 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokemon Wiki</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header class="header">
-        <img src="images/logo.png" alt="Logomarca Pokemon" height="100px" class="logo">
-        <ul>
-            <li class="bar"><a id="pokemon-link" href="#">Pokemons</a></li>
-            <li class="bar"><a id="map-link" href="#map-link">Regiões</a></li>
-            <li class="bar"><a href="">Personagens</a></li>
-            <li class="bar"><a href="">Historia</a></li>
-        </ul>
-    </header> 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pokemon Wiki</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <img src="images/logo.png" alt="Logomarca Pokemon" height="100px" class="logo">
+            <ul>
+                <li class="bar"><a id="pokemon-link" href="#">Pokemons</a></li>
+                <li class="bar"><a id="map-link" href="#map-link">Regiões</a></li>
+                <li class="bar"><a id="characters-link" href="#">Personagens</a></li>
+                <li class="bar"><a href="">Historia</a></li>
+            </ul>
+        </header> 
 
-    <div id="pokemon-container" class="pokemon-container">
-        <div id="pokemon-list">Carregando...</div>
-    </div>
-
-    <div id="pokemon-modal" style="font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
-        <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
-            <button id="modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
-            <h2>Buscar Pokémon</h2>
-            <input id="pokemon-input" type="text" placeholder="Digite o nome do Pokémon" style="width: 80%; padding: 10px; margin: 10px 0;">
-            <button id="fetch-pokemon" style="padding: 10px; background-color: orange; color: white; border: none; cursor: pointer; font-family: Bebas Neue;">Buscar</button>
-            <div id="modal-result" style="margin-top: 20px;">Nenhum resultado ainda.</div>
+        <div id="pokemon-container" class="pokemon-container">
+            <div id="pokemon-list">Carregando...</div>
         </div>
-    </div>
 
-    <div id="map-container" class="map-container">
-        <div id="map-list">Carregando...</div>
-    </div>
-    
-    <div id="map-modal" style="font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
-        <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
-            <button id="map-modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
-            <h2>Buscar Localização</h2>
-            <input id="location-input" type="text" placeholder="Digite o nome da localização" style="width: 80%; padding: 10px; margin: 10px 0;">
-            <button id="fetch-location" style="padding: 10px; background-color: orange; color: white; border: none; cursor: pointer; font-family: Bebas Neue;">Buscar</button>
-            <div id="location-modal-result" style="margin-top: 20px;">Nenhum resultado ainda.</div>
+        <div id="pokemon-modal" style="font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
+                <button id="modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+                <h2>Buscar Pokémon</h2>
+                <input id="pokemon-input" type="text" placeholder="Digite o nome do Pokémon" style="width: 80%; padding: 10px; margin: 10px 0;">
+                <button id="fetch-pokemon" style="padding: 10px; background-color: orange; color: white; border: none; cursor: pointer; font-family: Bebas Neue;">Buscar</button>
+                <div id="modal-result" style="margin-top: 20px;">Nenhum resultado ainda.</div>
+            </div>
         </div>
-    </div>    
-    
-    <script src="pokemonsCall/script.js"></script>
-    <script src="regionsCall/script.js"></script>
-</body>
-</html>
+
+        <div id="map-container" class="map-container">
+            <div id="map-list">Carregando...</div>
+        </div>
+        
+        <div id="map-modal" style="font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
+                <button id="map-modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+                <h2>Buscar Localização</h2>
+                <input id="location-input" type="text" placeholder="Digite o nome da localização" style="width: 80%; padding: 10px; margin: 10px 0;">
+                <button id="fetch-location" style="padding: 10px; background-color: orange; color: white; border: none; cursor: pointer; font-family: Bebas Neue;">Buscar</button>
+                <div id="location-modal-result" style="margin-top: 20px;">Nenhum resultado ainda.</div>
+            </div>
+        </div>
+        
+        <div id="characters-container" class="characters-container" style="display: none;">
+            <div id="characters-list">
+                <div class="character-card" data-character="Ash Ketchum" data-embed-id="f767f1a21b924033991a7fb1fb19820d">
+                    <p>Ash Ketchum</p>
+                </div>
+                
+                <div class="character-card" data-character="James Rocket" data-embed-id="9c3e94df379546b1a6870b15e90d6734">
+                    <p>James Rocket</p>
+                </div>
+                
+                <div class="character-card" data-character="Misty" data-embed-id="23ad61ff53e44eb2883a4e8018eaa31d">
+                    <p>Misty</p>
+                </div>
+                
+                <div class="character-card" data-character="Brock" data-embed-id="926aa1e1d7bd48b0b2b0d498c8049faa">
+                    <p>Brock</p>
+                </div>
+                
+                <div class="character-card" data-character="Team Rocket" data-embed-id="7d15046f6798464ca0ac5290fcf62ac9">
+                    <p>Jessie Rocket</p>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div id="character-modal" style="font-family: Bebas Neue; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); align-items: center; justify-content: center; z-index: 1000;">
+            <div style="background-color: white; padding: 20px; border-radius: 8px; text-align: center; width: 80%; max-width: 400px;">
+                <button id="character-modal-close" style="float: right; background: transparent; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+                <h2 id="character-name">Nome do Personagem</h2>
+                <div id="sketchfab-embed-container" class="sketchfab-embed-wrapper"></div>
+            </div>
+        </div>        
+
+        <script src="pokemonsCall/script.js"></script>
+        <script src="regionsCall/script.js"></script>
+        <script src="charactersCall/script.js"></script>
+    </body>
+    </html>
