@@ -8,6 +8,7 @@
         height: auto;
         background-color: black;
         scroll-behavior: smooth;
+        font-family: Bebas Neue;
     }
 
     .header {
@@ -22,7 +23,6 @@
     .bar  {
         margin-right: 10vh;
         display: inline;
-        font-family: Bebas Neue;
         font-size: 23px;  
     }
 
@@ -47,7 +47,6 @@
         overflow: hidden;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         animation: slide-down 0.5s ease forwards;
-        font-family: Bebas Neue;
     }
 
     #pokemon-list {
@@ -80,7 +79,6 @@
         color: white;
         border: none;
         cursor: pointer;
-        font-family: "Bebas Neue", sans-serif;
         font-size: 18px;
         border-radius: 5px;
     }
@@ -135,7 +133,6 @@
         color: white;
         border: none;
         cursor: pointer;
-        font-family: Bebas Neue;
     }    
        
     .bebas-neue-regular {
